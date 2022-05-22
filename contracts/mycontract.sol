@@ -3,7 +3,11 @@
 pragma solidity 0.8.13;
 							
 // Creating a contract
-contract wallet{
+contract mycontract{
+	uint public x = 10;
+	function set(uint _x) public {
+		x = _x;
+	}
 
 	// Specify the owner's address
 	// which is publicly visible
@@ -70,6 +74,7 @@ function sendMoney(
 	public view onlyOwner returns(uint){
 		return address(this).balance;
 	}
+	
 
 	// Defining a function that will return
 // the current balance of the owner's account
